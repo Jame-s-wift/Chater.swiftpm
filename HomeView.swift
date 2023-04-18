@@ -8,7 +8,6 @@
 import SwiftUI
 struct HomeView: View {
     @State private var quote = information.quotes.randomElement()!
-    @EnvironmentObject var appState: AppState
     
     var body: some View {
         ZStack{
@@ -19,7 +18,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                Text("Hello, \(appState.userName)")
+                Text("Hello, user")
                     .font(.largeTitle)
                     .bold()
                     .padding()

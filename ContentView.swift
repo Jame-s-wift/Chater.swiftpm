@@ -1,13 +1,7 @@
 import SwiftUI
 
-
-class AppState: ObservableObject {
-    @Published var userName: String = "User"
-}
-
-
 struct ContentView: View {
-    @StateObject var appState = AppState()
+
     @State var selectedTab = 1
     var body: some View {
         TabView(selection: $selectedTab){
@@ -28,7 +22,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            SettingsView()
+            ConversationTipsView()
                 .tabItem{
                     Image(systemName: "gearshape.fill")
                         .foregroundColor(.gray)
@@ -39,7 +33,6 @@ struct ContentView: View {
         .onAppear{
             selectedTab = 1
         }
-        .environmentObject(appState)
         .tabViewStyle(.automatic)
     }
 }
