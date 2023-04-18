@@ -24,9 +24,9 @@ struct ContentView: View {
             
             ConversationTipsView()
                 .tabItem{
-                    Image(systemName: "gearshape.fill")
+                    Image(systemName: "rectangle.3.group.bubble.left")
                         .foregroundColor(.gray)
-                    Text("Settings")
+                    Text("Conversation Tips")
                 }
                 .tag(2)
         }
