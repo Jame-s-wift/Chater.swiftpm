@@ -15,14 +15,7 @@ struct SettingsView: View {
             NavigationStack {
                 Form{
                     NavigationLink{
-                        Text("Current username: \(appState.userName)")
-                        
-                        TextField("Input new username", text: $appState.userName)
-                            .padding()
-                            .background(.gray.opacity(0.2))
-                            .cornerRadius(15)
-                            .padding()
-                            .frame(width: 500)
+                        UserNameView()
                     } label: {
                         Text("Change username")
                     }
